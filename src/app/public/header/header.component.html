@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav id="main-nav" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" data-target="navcollapse" (click)="isCollapsed=!isCollapsed">
@@ -10,12 +10,11 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse navcollapse" [collapse]="isCollapsed">
     <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="['']">Home</a></li>
-      <li><a routerLink="['']">Page 1</a></li>
-      <li><a routerLink="['']">Page 2</a></li>
-      <li><a routerLink="['']">Page 3</a></li>
-      <li><a routerLink="['']">Page 4</a></li>
-      <li><a routerLink="['']">Page 5</a></li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['']">Home</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/about']">About ICAN QUIT in Pregnancy</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/profile']">Our Researchers</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/contactus']">Contact Us</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['/trainingmain']">Training</a></li>
     </ul>
     </div>
   </div>

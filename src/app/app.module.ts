@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,10 @@ import { AboutMainComponent } from './public/about-main/about-main.component';
 import { ProfileMainComponent } from './public/profile-main/profile-main.component';
 import { ContactUsComponent } from './public/contact-us/contact-us.component';
 import { TrainingMainComponent } from './public/training-main/training-main.component';
+import { ProtectedTrainingMainComponent } from './protected/protected-training-main/protected-training-main.component';
+import { LoginPageComponent } from './public/training-main/login-page/login-page.component';
+import {AuthService} from "./services/auth.service";
+import {AuthGuard} from "./services/auth.guard";
 
 @NgModule({
   declarations: [
@@ -21,16 +25,19 @@ import { TrainingMainComponent } from './public/training-main/training-main.comp
     AboutMainComponent,
     ProfileMainComponent,
     ContactUsComponent,
-    TrainingMainComponent
+    TrainingMainComponent,
+    ProtectedTrainingMainComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    CollapseModule
+    CollapseModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

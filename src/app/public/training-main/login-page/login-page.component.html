@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+  <h2>Sign in to access training materials</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSignin()">
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input formControlName="password" type="password" id="password">
+  </div>
+  <button type="submit" [disabled]="!loginForm.valid">Sign In</button>
+  </form>
+    <div class="alert alert-danger">
+      <p>Sign in failed. Check password</p>
+    </div>
+</div>
+</div>

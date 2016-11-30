@@ -6,7 +6,7 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public isCollapsed:boolean = false;
+  public isCollapsed:boolean = true;
   @Input() public set collapse(value:boolean){}
 
   constructor() { }

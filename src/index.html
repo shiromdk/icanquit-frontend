@@ -11,5 +11,17 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAtmFFaOzHmcMXzVM-G3tQRXtP5hlEGS5A",
+      authDomain: "icanquit-auth.firebaseapp.com",
+      databaseURL: "https://icanquit-auth.firebaseio.com",
+      storageBucket: "icanquit-auth.appspot.com",
+      messagingSenderId: "959075145257"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>

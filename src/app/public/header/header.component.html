@@ -11,7 +11,20 @@
     <div id="navbar" class="navbar-collapse collapse navcollapse" [collapse]="isCollapsed">
     <ul class="nav navbar-nav navbar-right">
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['']">Home</a></li>
-      <li routerLinkActive="active"><a [routerLink]="['/about']">About ICAN QUIT in Pregnancy</a></li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/about']">About ICAN QUIT in Pregnancy</a>
+        <div class="navbar visible-xs-block" *ngIf = "isAbout()">
+          <ul>
+            <li><a>Why this project is important</a></li>
+            <li><a>Aim of the Study</a></li>
+            <li><a>What is Nicotine Replacement Therapy</a></li>
+            <li><a>Study Methods</a></li>
+            <li><a>Expected Outcomes</a></li>
+            <li><a>Who is funding the study?</a></li>
+            <li><a>What is involed in participating?</a></li>
+          </ul>
+        </div>
+      </li>
       <li routerLinkActive="active"><a [routerLink]="['/profile']">Our Research Team</a></li>
       <li routerLinkActive="active"><a [routerLink]="['/contactus']">Contact Us</a></li>
       <li routerLinkActive="active"><a [routerLink]="['/trainingmain']">Training</a></li>

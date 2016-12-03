@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'homepage.component.html',
   styleUrls: ['homepage.component.css']
 })
-export class HomepageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class HomepageComponent{
+  sources:Array<Object>;
+  constructor() {
+    this.sources = [
+      {
+        src: "../../../assets/videos/intro.mp4",
+        type: "video/mp4"
+      }
+    ];
   }
+
+
 
 }

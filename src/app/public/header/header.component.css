@@ -2,3 +2,12 @@
 
 }
 
+.navbar-nav>li>a {
+  color:#f1831b;
+  font-weight:bold;
+}
+.navbar-default .navbar-nav>.active>a {
+  color:white;
+  background-color: #f1831b;
+  font-weight:bold;
+}

@@ -1,3 +1,12 @@
-<h1>
-  Website Under Construction
-</h1>
+<div class="row">
+  <div class="col-sm-8">
+    <vg-player>
+        <video vg-media #media id="singleVideo" preload="metadata" crossorigin>
+          <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
+        </video>
+  </vg-player>
+
+</div>
+</div>
+
+

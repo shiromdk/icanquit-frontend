@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+h1{
+  font-family:'Questrial', sans-serif;
+}
+a{
+  font-family:'Roboto', sans-serif;
+
+}
+
+body{
+  background-color: #f1831b;
+}

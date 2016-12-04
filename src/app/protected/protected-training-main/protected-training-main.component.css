@@ -1,0 +1,14 @@
+.heading{
+  text-align: center;
+}
+.nav-padding{
+  margin-right:10px;
+}
+
+@media only screen and (min-width : 768px) {
+  .sectionthumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+}

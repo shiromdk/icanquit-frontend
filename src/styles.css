@@ -8,14 +8,25 @@ a{
 
 }
 
+html{
+  min-height:100%;
+  height:100%;
+}
+
 body{
+  background: #dbca69;
+  z-index: -1;
 
 }
 vg-player{
   width:100%;
 
 }
-
+.container{
+  background-color: white;
+  min-height:100%;
+  height:100%;
+}
 video{
   width:100%;
   height:auto !important;

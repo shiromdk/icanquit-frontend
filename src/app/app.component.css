@@ -1,0 +1,9 @@
+.jumbotron{
+  background-color:white;
+  margin-bottom: 0;
+
+}
+
+.vertical-centre{
+  display:flex;justify-content:center;align-items:center;
+}

@@ -9,5 +9,14 @@ a{
 }
 
 body{
-  background-color: #f1831b;
+
+}
+vg-player{
+  width:100%;
+
+}
+
+video{
+  width:100%;
+  height:auto !important;
 }

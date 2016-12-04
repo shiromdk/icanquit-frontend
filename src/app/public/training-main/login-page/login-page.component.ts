@@ -2,6 +2,9 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../../../services/auth.service";
 import {Subscription} from "rxjs";
+import {User} from "../../../services/user.interface";
+import {Router} from "@angular/router";
+declare var firebase: any;
 
 
 @Component({
@@ -11,18 +14,33 @@ import {Subscription} from "rxjs";
 })
 export class LoginPageComponent implements OnInit,OnDestroy {
   loginForm: FormGroup;
-  error:boolean = false;
+  public failerror:any = false;
   errorMessage ='';
-  constructor(private fb:FormBuilder, private authService:AuthService) {
+  constructor(private fb:FormBuilder, private authService:AuthService,private router:Router) {
+  }
+
+  signinUser(user:User){
+    firebase.auth().signInWithEmailAndPassword("s1d76j3fckqur5uhjtgj67996nwhz623@email.email", user.password).then((userInfo)=>{
+      this.router.navigate(['/trainingmain']);
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      // ...
+    }).then(()=>
+      {this.failerror=true;}
+    );
   }
 
   onSignin(){
-    this.authService.signinUser(this.loginForm.value);
+    this.signinUser(this.loginForm.value);
   }
 
   ngOnDestroy(){
 
   }
+
 
   ngOnInit():any{
     this.loginForm = this.fb.group({

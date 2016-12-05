@@ -29,7 +29,9 @@ export class LoginPageComponent implements OnInit,OnDestroy {
 
       // ...
     }).then(()=>
-      {this.failerror=true;}
+      {
+        this.failerror=true;
+      }
     );
   }
 

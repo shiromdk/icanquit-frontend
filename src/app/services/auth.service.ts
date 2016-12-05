@@ -3,6 +3,7 @@ import {User} from "./user.interface";
 import {Router} from "@angular/router";
 import {Injectable, Output, EventEmitter} from "@angular/core";
 import {Subject, Observable} from "rxjs/Rx";
+
 declare var firebase: any;
 
 
@@ -10,7 +11,6 @@ declare var firebase: any;
 export class AuthService{
 
     constructor(private router:Router){}
-
 
     signinUser(user:User){
       firebase.auth().signInWithEmailAndPassword("s1d76j3fckqur5uhjtgj67996nwhz623@email.email", user.password).then((userInfo)=>{

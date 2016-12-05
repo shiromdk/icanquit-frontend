@@ -13,9 +13,11 @@ import { ContactUsComponent } from './public/contact-us/contact-us.component';
 import { AuthService} from "./services/auth.service";
 import { AuthGuard} from "./services/auth.guard";
 
+
 /** Custom Module Imports */
 import {AboutModule} from "./public/about-main/about.module";
 import {TrainingModule} from "./public/training-main/training.module";
+
 
 
 
@@ -35,7 +37,8 @@ import {TrainingModule} from "./public/training-main/training.module";
     routing,
     CollapseModule,
     AboutModule,
-    TrainingModule
+    TrainingModule,
+
 
   ],
   providers: [AuthService,AuthGuard],

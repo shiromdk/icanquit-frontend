@@ -1,8 +1,13 @@
 <div class="container">
   <h2>Training Videos</h2>
   <div class="row">
-    <div *ngFor="let video of sources;let i=index">
-      {{i}}
-    </div>
+    <ul class="pagination">
+      <li *ngFor="let item of videoList | paginate: { itemsPerPage: 5, currentPage: page }">
+      {{item}}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
 </div>

@@ -10,7 +10,7 @@ import { TrainingLandingPageComponent } from './training-public-components/train
 import { ProtectedVideolistComponent } from './training-protected-components/protected-videolist/protected-videolist.component';
 import { ProtectedDocumentlistComponent } from './training-protected-components/protected-documentlist/protected-documentlist.component';
 import { ProtectedTrainingStartComponent } from './training-protected-components/protected-training-start/protected-training-start.component';
-
+import {Ng2PaginationModule} from 'ng2-pagination';
 
 @NgModule({
   declarations:[
@@ -26,7 +26,8 @@ import { ProtectedTrainingStartComponent } from './training-protected-components
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    trainingRouting
+    trainingRouting,
+    Ng2PaginationModule
   ],
   providers:[
 

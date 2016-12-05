@@ -25,6 +25,7 @@ export class TrainingLandingPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.isAuth();
   }
   isAuth(){
     return this.isAuthenticated;

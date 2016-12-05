@@ -11,6 +11,7 @@ import { ProtectedVideolistComponent } from './training-protected-components/pro
 import { ProtectedDocumentlistComponent } from './training-protected-components/protected-documentlist/protected-documentlist.component';
 import { ProtectedTrainingStartComponent } from './training-protected-components/protected-training-start/protected-training-start.component';
 import {Ng2PaginationModule} from 'ng2-pagination';
+import {PagerService} from "../../services/pager.service";
 
 @NgModule({
   declarations:[
@@ -30,7 +31,7 @@ import {Ng2PaginationModule} from 'ng2-pagination';
     Ng2PaginationModule
   ],
   providers:[
-
+    PagerService
   ],
   bootstrap:[
 

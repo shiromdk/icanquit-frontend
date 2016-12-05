@@ -17,6 +17,9 @@ import { AuthGuard} from "./services/auth.guard";
 /** Custom Module Imports */
 import {AboutModule} from "./public/about-main/about.module";
 import {TrainingModule} from "./public/training-main/training.module";
+import {trainingRouting} from "./public/training-main/training.routing";
+import {PagerService} from "./services/index";
+
 
 
 

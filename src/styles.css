@@ -14,8 +14,9 @@ html{
 }
 
 body{
-  background: #dbca69;
+  background: #8f3b1b;
   z-index: -1;
+  height: 100%;
 
 }
 vg-player{

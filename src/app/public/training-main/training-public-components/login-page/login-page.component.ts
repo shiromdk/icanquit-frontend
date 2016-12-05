@@ -1,16 +1,16 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-import {AuthService} from "../../../services/auth.service";
-import {Subscription} from "rxjs";
-import {User} from "../../../services/user.interface";
+
 import {Router} from "@angular/router";
+import {AuthService} from "../../../../services/auth.service";
+import {User} from "../../../../services/user.interface";
 declare var firebase: any;
 
 
 @Component({
   selector: 'app-login-page',
-  templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.css']
+  templateUrl: 'login-page.component.html',
+  styleUrls: ['login-page.component.css']
 })
 export class LoginPageComponent implements OnInit,OnDestroy {
   loginForm: FormGroup;

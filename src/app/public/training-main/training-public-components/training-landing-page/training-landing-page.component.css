@@ -1,0 +1,9 @@
+.centering{
+  margin: auto;
+}
+.navbar navbar-default{
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  text-align: center;
+}

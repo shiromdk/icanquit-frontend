@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['signin']">Sign In</a></li>
+        <li><a [routerLink]="['protectedtrainingmain']">Protected Training Main</a></li>
+      </ul>
+      <ul class="nav navbar-nav" *ngIf="isAuth()">
+        <li><a (click)="onLogout()">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <video id="singleVideo" preload="metadata" controls>
+        <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
+      </video>
+      <!--
+         <vg-player>
+             <video vg-media #media id="singleVideo" preload="metadata" crossorigin>
+               <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
+             </video>
+         </vg-player>-->
+    </div>
+  </div>
+  </div>
+

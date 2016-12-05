@@ -1,9 +1,21 @@
 .jumbotron{
   background-color:white;
   margin-bottom: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
 
 }
 
 .vertical-centre{
   display:flex;justify-content:center;align-items:center;
+}
+
+.body{
+  min-height: 100% !important;
+}
+
+.fill-height{
+  min-height: 100%;
+  height:auto !important; /* cross-browser */
+  height: 100%; /* cross-browser */
 }

@@ -18,7 +18,7 @@ export class TrainingLandingPageComponent implements OnInit, OnDestroy {
     );
     this.sources = [
       {
-        src: "../../../assets/videos/intro.mp4",
+        src: "..\/..\/..\/assets\/videos\/intro.mp4",
         type: "video/mp4"
       }
     ];
@@ -26,6 +26,7 @@ export class TrainingLandingPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.isAuth();
+
   }
   isAuth(){
     return this.isAuthenticated;

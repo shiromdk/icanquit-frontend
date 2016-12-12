@@ -17,8 +17,15 @@ import { AuthGuard} from "./services/auth.guard";
 /** Custom Module Imports */
 import {AboutModule} from "./public/about-main/about.module";
 import {TrainingModule} from "./public/training-main/training.module";
-import {trainingRouting} from "./public/training-main/training.routing";
-import {PagerService} from "./services/index";
+import { AdminMainComponent } from './admin/admin-main/admin-main.component';
+
+
+import { FileUploadModule} from 'ng2-file-upload';
+import { AdminVideoUploadComponent } from './admin/admin-video-upload/admin-video-upload.component';
+import { AdminDocUploadComponent } from './admin/admin-doc-upload/admin-doc-upload.component';
+
+import {PagerService} from "./services/pager.service";
+import {VideosListingService} from "./services/videos-listing.service";
 
 
 
@@ -33,6 +40,11 @@ import {PagerService} from "./services/index";
     HeaderComponent,
     ProfileMainComponent,
     ContactUsComponent,
+    AdminMainComponent,
+    AdminVideoUploadComponent,
+    AdminDocUploadComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -41,10 +53,9 @@ import {PagerService} from "./services/index";
     CollapseModule,
     AboutModule,
     TrainingModule,
-
-
+    FileUploadModule
   ],
-  providers: [AuthService,AuthGuard],
+  providers: [AuthService,AuthGuard,PagerService,VideosListingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

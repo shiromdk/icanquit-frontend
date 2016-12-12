@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
 
 import * as _ from 'underscore';
+import {VideosListingService} from "../../../../services/videos-listing.service";
+import {Video} from "../../../../classes/video";
 
 
 
@@ -18,10 +20,13 @@ import * as _ from 'underscore';
 
 export class ProtectedVideolistComponent implements OnInit {
 
-  constructor(private http:Http,private router:Router) {}
+  constructor(private http:Http,private router:Router,private videoservice:VideosListingService) {
+
+  }
+
 
   // array of all items to be paged
-  private allItems: any[];
+  private allItems: Video[]=this.videoservice.getVideos();
 
   // pager object
   pager: any = {};
@@ -30,15 +35,7 @@ export class ProtectedVideolistComponent implements OnInit {
   pagedItems: any[];
 
   ngOnInit() {
-    this.http.get('../../../../../assets/video-sources.json')
-      .map((response: Response) => response.json())
-      .subscribe(data => {
-        // set items to json response
-        this.allItems = data;
-        console.log(data);
-        // initialize to page 1
-        this.setPage(1);
-      });
+    this.setPage(1);
   }
   setPage(page: number) {
     if (page < 1 || page > this.pager.totalPages) {

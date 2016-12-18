@@ -2,6 +2,7 @@
   margin-bottom: 0;
   border-bottom: 0;
   background-color:#dbca69;
+
 }
 
 #nav-container{
@@ -14,9 +15,11 @@
 
 .navbar-nav>li>a {
   font-weight:bold;
+
+
 }
 .navbar-default .navbar-nav>.active>a {
   color:white;
-
   font-weight:bold;
+  background-color: #8f3b1b;
 }

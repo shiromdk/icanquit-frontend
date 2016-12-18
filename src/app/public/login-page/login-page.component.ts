@@ -2,8 +2,10 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 
 import {Router} from "@angular/router";
-import {AuthService} from "../../../../services/auth.service";
-import {User} from "../../../../services/user.interface";
+
+
+import {AuthService} from "../../services/auth.service";
+import {User} from "../../services/user.interface";
 declare var firebase: any;
 
 

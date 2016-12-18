@@ -1,0 +1,8 @@
+<div class="container-fluid">
+<nav>
+  <ul class="nav navbar-right">
+    <li *ngIf="!isAuth()"><a [routerLink]="['/signin']" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+    <li *ngIf="isAuth()"><a (click)="onLogout()" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+  </ul>
+</nav>
+</div>

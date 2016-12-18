@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 
-import {LoginPageComponent} from "./training-public-components/login-page/login-page.component";
+import {LoginPageComponent} from "../login-page/login-page.component";
 import {TrainingMainComponent} from "./training-main.component";
 import {ProtectedTrainingMainComponent} from "./training-protected-components/protected-training-main/protected-training-main.component";
 import {trainingRouting} from "./training.routing";
@@ -11,7 +11,9 @@ import { ProtectedVideolistComponent } from './training-protected-components/pro
 import { ProtectedDocumentlistComponent } from './training-protected-components/protected-documentlist/protected-documentlist.component';
 import { ProtectedTrainingStartComponent } from './training-protected-components/protected-training-start/protected-training-start.component';
 import {Ng2PaginationModule} from 'ng2-pagination';
-import {PagerService} from "../../services/pager.service";
+import { VideoListingComponent } from './training-protected-components/protected-videolist/video-listing/video-listing.component';
+import { VideoIndexComponent } from './training-protected-components/protected-videolist/video-index/video-index.component';
+import { VideoPageComponent } from './training-protected-components/protected-videolist/video-page/video-page.component';
 
 @NgModule({
   declarations:[
@@ -21,7 +23,10 @@ import {PagerService} from "../../services/pager.service";
     TrainingLandingPageComponent,
     ProtectedVideolistComponent,
     ProtectedDocumentlistComponent,
-    ProtectedTrainingStartComponent
+    ProtectedTrainingStartComponent,
+    VideoListingComponent,
+    VideoIndexComponent,
+    VideoPageComponent
   ],
   imports:[
     CommonModule,
@@ -31,7 +36,6 @@ import {PagerService} from "../../services/pager.service";
     Ng2PaginationModule
   ],
   providers:[
-    PagerService
   ],
   bootstrap:[
 

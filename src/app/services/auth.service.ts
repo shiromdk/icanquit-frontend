@@ -14,7 +14,6 @@ export class AuthService{
 
     signinUser(user:User){
       firebase.auth().signInWithEmailAndPassword("s1d76j3fckqur5uhjtgj67996nwhz623@email.email", user.password).then((userInfo)=>{
-
         this.router.navigate(['']);
       }).catch(function(error) {
         // Handle Errors here.

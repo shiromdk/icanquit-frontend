@@ -5,6 +5,8 @@ import {ProfileMainComponent} from "./public/profile-main/profile-main.component
 import {ContactUsComponent} from "./public/contact-us/contact-us.component";
 import {AdminMainComponent} from "./admin/admin-main/admin-main.component";
 import {AuthGuard} from "./services/auth.guard";
+import {LoginPageComponent} from "./public/login-page/login-page.component";
+import {ProfileLandingComponent} from "./public/profile-main/profile-landing.component";
 
 
 /** Training Routes */
@@ -13,8 +15,11 @@ import {AuthGuard} from "./services/auth.guard";
 /** Main Routes  */
 const APP_ROUTES:Routes = [
   {path:'',component:HomepageComponent},
+  {path:'signin',component:LoginPageComponent},
   {path:'about',component:AboutMainComponent},
-  {path:'profile',component:ProfileMainComponent},
+  {path:'profile',component:ProfileMainComponent,children:[
+    {path:'',component:ProfileLandingComponent}
+  ]},
   {path:'contactus',component:ContactUsComponent},
   {path:'admin',component:AdminMainComponent,canActivate:[AuthGuard]},
   {path:'trainingmain', loadChildren:'app/public/training-main/training.module#TrainingModule'}

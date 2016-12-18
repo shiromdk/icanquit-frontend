@@ -24,12 +24,12 @@ import { FileUploadModule} from 'ng2-file-upload';
 import { AdminVideoUploadComponent } from './admin/admin-video-upload/admin-video-upload.component';
 import { AdminDocUploadComponent } from './admin/admin-doc-upload/admin-doc-upload.component';
 
-import {PagerService} from "./services/pager.service";
+
 import {VideosListingService} from "./services/videos-listing.service";
-
-
-
-
+import {EmitterService} from "./services/emitter.service";
+import { SignInBarComponent } from './public/sign-in-bar/sign-in-bar.component';
+import { ProfileLandingComponent } from './public/profile-main/profile-landing.component';
+import { ProfilePortraitComponent } from './public/profile-main/profile-portrait/profile-portrait.component';
 
 
 
@@ -43,6 +43,9 @@ import {VideosListingService} from "./services/videos-listing.service";
     AdminMainComponent,
     AdminVideoUploadComponent,
     AdminDocUploadComponent,
+    SignInBarComponent,
+    ProfileLandingComponent,
+    ProfilePortraitComponent,
 
 
   ],
@@ -55,7 +58,7 @@ import {VideosListingService} from "./services/videos-listing.service";
     TrainingModule,
     FileUploadModule
   ],
-  providers: [AuthService,AuthGuard,PagerService,VideosListingService],
+  providers: [AuthService,AuthGuard,EmitterService,VideosListingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
-<app-profile-portrait></app-profile-portrait>
+<div class="row">
+  <div class="col-sm-12">
+    <a class="profileHeaderLinks" [routerLink]="['/profile']">Team Profiles</a>
+  </div>
+</div>
+<app-profile-portrait
+  *ngFor="let profile of profiles"
+  [profile]=profile>
+</app-profile-portrait>

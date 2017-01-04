@@ -2,17 +2,17 @@
   <div class="row">
     <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
       <ul id="sidebar" class="nav">
-        <li><a>Why this project is important</a></li>
-        <li><a>Aim of the Study</a></li>
-        <li><a>What is Nicotine Replacement Therapy</a></li>
-        <li><a>Study Methods</a></li>
-        <li><a>Expected Outcomes</a></li>
-        <li><a>Who is funding the study?</a></li>
-        <li><a>What is involed in participating?</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-project']">Why this project is important</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-aim']">Aim of the Study</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-nrt']">What is Nicotine Replacement Therapy</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-study-methods']">Study Methods</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-expected-outcomes']">Expected Outcomes</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-funding']">Who is funding the study?</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['about-participation']">What is involed in participating?</a></li>
       </ul>
     </div>
     <div class="col-sm-10 col-md-10 col-lg-10">
-      <h1>Test</h1>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

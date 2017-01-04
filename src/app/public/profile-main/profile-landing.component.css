@@ -1,0 +1,19 @@
+a.profileHeaderLinks{
+  margin-top:5px;
+  margin-left:10px;
+  font-size: 2em;
+}
+
+a.profileHeaderLinks:link{
+  text-decoration: none;
+  color:black;
+
+
+}
+
+a.profileHeaderLinks:visited{
+  text-decoration: none;
+  color:black;
+
+}
+

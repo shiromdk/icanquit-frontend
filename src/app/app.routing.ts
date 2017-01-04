@@ -16,7 +16,7 @@ import {ProfileLandingComponent} from "./public/profile-main/profile-landing.com
 const APP_ROUTES:Routes = [
   {path:'',component:HomepageComponent},
   {path:'signin',component:LoginPageComponent},
-  {path:'about',component:AboutMainComponent},
+  {path:'about',loadChildren:'app/public/about-main/about.module#AboutModule'},
   {path:'profile',component:ProfileMainComponent,children:[
     {path:'',component:ProfileLandingComponent}
   ]},

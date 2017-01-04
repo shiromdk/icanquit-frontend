@@ -30,6 +30,8 @@ import {EmitterService} from "./services/emitter.service";
 import { SignInBarComponent } from './public/sign-in-bar/sign-in-bar.component';
 import { ProfileLandingComponent } from './public/profile-main/profile-landing.component';
 import { ProfilePortraitComponent } from './public/profile-main/profile-portrait/profile-portrait.component';
+import {ProfileService} from "./services/profile.service";
+import {aboutRouting} from "./public/about-main/about.routing";
 
 
 
@@ -58,7 +60,7 @@ import { ProfilePortraitComponent } from './public/profile-main/profile-portrait
     TrainingModule,
     FileUploadModule
   ],
-  providers: [AuthService,AuthGuard,EmitterService,VideosListingService],
+  providers: [AuthService,AuthGuard,EmitterService,VideosListingService,ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

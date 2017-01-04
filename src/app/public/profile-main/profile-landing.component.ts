@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {ProfileService} from "../../services/profile.service";
+import {profile} from "../../classes/profile";
+import {EmitterService} from "../../services/emitter.service";
 
 @Component({
   selector: 'app-profile-landing',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileLandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileservice:ProfileService) { }
+  profiles:profile[];
+  @Input() listId: string;
+  @Input() editId: string;
 
   ngOnInit() {
+    this.loadProfiles();
   }
 
+  loadProfiles(){
+    this.profileservice.getProfiles()
+      .subscribe(
+        profiles =>this.profiles = profiles,
+        err =>{
+          console.log(err);
+        }
+      );
+  }
+  ngOnChanges(changes:any){
+    EmitterService.get(this.listId).subscribe((profiles:profile[]) => {this.loadProfiles()});
+  }
 }

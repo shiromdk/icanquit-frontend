@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {profile} from "../../../classes/profile";
 
 @Component({
   selector: 'app-profile-portrait',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePortraitComponent implements OnInit {
 
+  @Input() profile:profile;
+  @Input() listId:string;
+  @Input() editId:string;
   constructor() { }
 
   ngOnInit() {

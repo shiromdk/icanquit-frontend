@@ -14,13 +14,13 @@
         <a [routerLink]="['/about']">About ICAN QUIT in Pregnancy</a>
         <div class="navbar visible-xs-block" *ngIf = "isAbout()">
           <ul>
-            <li><a>Why this project is important</a></li>
-            <li><a>Aim of the Study</a></li>
-            <li><a>What is Nicotine Replacement Therapy</a></li>
-            <li><a>Study Methods</a></li>
-            <li><a>Expected Outcomes</a></li>
-            <li><a>Who is funding the study?</a></li>
-            <li><a>What is involed in participating?</a></li>
+            <li><a [routerLink]="['/about/about-project']">Why this project is important</a></li>
+            <li><a [routerLink]="['/about/about-aim']">Aim of the Study</a></li>
+            <li><a [routerLink]="['/about/about-nrt']">What is Nicotine Replacement Therapy</a></li>
+            <li><a [routerLink]="['/about/about-study-methods']">Study Methods</a></li>
+            <li><a [routerLink]="['/about/about-expected-outcomes']">Expected Outcomes</a></li>
+            <li><a [routerLink]="['/about/about-funding']">Who is funding the study?</a></li>
+            <li><a [routerLink]="['/about/about-participation']">What is involed in participating?</a></li>
           </ul>
         </div>
       </li>
